@@ -20,54 +20,137 @@ body{
 /* Layout */
 .Container {
     margin: 0 auto; 
-    background-color: #7f0; 
+     
 }
-
+.Flex{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+/*topodo site*/
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
 /* Smartphone portrait */
-/* Smartphone Landscape */
-@media (min-width: 576px){
-    body{
-        background-color: #0ff;
-} 
-        /*Layout*/
-        .Container{
-          width: 540px;
-        } 
+/*Cabecalho*/
+heder {
+    height: 60px;
 }
 
-/* Tablet portrait*/
+#logo img{
+    width: 128px;
+    height: 128px;
+}
+#check{
+    display: none;
+}
+label{
+    font-size: 3em;
+    padding-right: 15px;
+}
+
+
+
+nav ul {
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#check:checked ~ ul {
+    right: 0;
+    
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*smartphone landscape>>>>>>>>>>>>>*/
+
+@media (min-width: 576px){
+   
+    /*Layout*/
+    .Container{
+      width: 540px;
+    } 
+}
+/* Tablet portrait>>>>>>>>>>>>>>>>>>>>>*/
 
 @media (min-width: 768px){
-    body{
-        background-color: #ff0;
+   
+    /*Layout*/
+    .Container{
+       width: 720px;
+}  
 }
-                /*Layout*/
-                .Container{
-                    width: 720px;
-  }  
-}
-/* Tablet Landscape */
+/* Tablet Landscape>>>>>>>>>>>>>>>>>>>>>*/
 
 @media (min-width: 992px){
-    body{
-        background-color: #ff6600;
+   
+    /*Layout*/
+    .Container{
+        width: 960px;
+}  
+}
+/* pc>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 1200px){
+   
+    /*Layout*/
+    .Container{
+        width: 1140px;
 } 
-        /*Layout*/
-        .Container{
-            width: 960px;
-  }  
+
+/*Cabecalho*/
+header {
+    height: 120px;
 }
 
-/* pc */
-@media (min-width: 1200px){
-    body{
-        background-color: #ff0000
+#logo img{
+    width: 189px;
+    height: 189px;
+    margin-top: 30px;
 }
-        /*Layout*/
-        .Container{
-            width: 1140px;
-  }  
+label{
+    display: none;
 }
+nav ul {
+    position: static;
+    right: auto;
+    background-color: transparent;
+    margin-top: 50px;
+}
+nav ul li{
+    float: left;
+    border: 0;
+}
+nav ul li a{
+    color: #343538;
+    
+}
+nav ul li a:hover{
+    color: #c00000;
+}
+}
+
+
+
 
 
 
